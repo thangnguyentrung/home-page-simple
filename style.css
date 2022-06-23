@@ -1,0 +1,135 @@
+:root {
+    --color1: #FBBC01; /* màu chủ đạo */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Baloo chettan 2', cursive ;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+/* background của trang wed*/
+header {
+    width: 100vw;
+    height: 100vh;
+    background: url('img/background.png');
+    position: relative;
+    background-size: cover;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+} 
+/* làm giảm độ sáng của web*/
+header::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: rgba(0,0,0,0.5);
+}
+/* chỉnh sửa input:checkbox*/
+header input {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+    position: fixed;/* định vị cố định phàn tử*/
+}
+.menu-icon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    opacity: 1; /* mờ đục */
+    z-index: 1;
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/*hiển thị list-icon*/
+.menu-line {
+    height: 4px;
+    width: 100%;
+    background: var(--color1);
+    position: relative;
+}
+.menu-line::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    background: var(--color1);
+    top: -14px;
+}
+.menu-line::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    background: var(--color1);
+    top: 14px;
+}
+
+/* list */
+.menu-item {
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    top: 0;
+    right: -100%;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    z-index: 10;
+    flex-direction: column;
+    transition: 0.5s;
+}
+.menu-item li {
+    line-height: 40px;
+}
+.menu-item li a {
+    color: var(--color1);
+}
+/* title của trang wed */
+.header-text {
+    position: absolute;
+}
+.header-text h1 {
+    font-size: 60px;
+    color: var(--color1);
+    margin-bottom: 20px;
+}
+
+.header-text a {
+    padding: 15px 40px;
+    background: var(--color1);
+    border-radius: 50px;
+    font-size: 25px;
+    color: #000;
+}
+.header-text a:hover {
+    color: var(--color1);
+    background: transparent;
+    border: 2px solid  var(--color1);
+    transition: 0.3s;
+
+}
